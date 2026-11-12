@@ -6,7 +6,10 @@ using UnityEngine;
 public class Customer : MonoBehaviour
 {
     
-    FoodOrder order;
+    public FoodOrder Order
+    {
+        get; private set;
+    }
     
     
     [SerializeField] BehaviorGraphAgent behaviorGraphAgent;
@@ -43,6 +46,6 @@ public class Customer : MonoBehaviour
 
     private void GenerateOrder()
     {
-        order = new FoodOrder();
+        Order = new FoodOrder();
     }
 }
