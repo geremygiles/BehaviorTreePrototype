@@ -930,12 +930,12 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 718872810570473896}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2935678467136980633}
+  m_Father: {fileID: 7921340398131941427}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1387,7 +1387,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 6683467631504758742}
   m_Father: {fileID: 2935678467136980633}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -3214,12 +3215,11 @@ RectTransform:
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 7921340398131941427}
-  - {fileID: 6683467631504758742}
   m_Father: {fileID: 8674542843659018786}
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 2.09}
+  m_AnchoredPosition: {x: 0, y: 2.43}
   m_SizeDelta: {x: 500, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &2463412423778606010
@@ -6335,6 +6335,7 @@ GameObject:
   - component: {fileID: 7142416814001396742}
   - component: {fileID: 2242505371210524524}
   - component: {fileID: 7913074030373828599}
+  - component: {fileID: 4699467790575997582}
   m_Layer: 0
   m_Name: Customer
   m_TagString: Untagged
@@ -6503,7 +6504,67 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc9b4f9610a8d974f8b9d95a74e4d701, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Order
+  textBox: {fileID: 1077726763198013346}
   speakingText: {fileID: 4136988963049684567}
+  behaviorGraphAgent: {fileID: 4699467790575997582}
+  sayOrderChannel: {fileID: 11400000, guid: d9e100ac1dfdc0c41812a4137d42eac6, type: 2}
+  Target: {fileID: 0}
+--- !u!114 &4699467790575997582
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5862823327918832820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0038c16c34866b4f9e25c9c0dc0f7e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.Behavior::Unity.Behavior.BehaviorGraphAgent
+  m_Graph: {fileID: 2611443199736831369, guid: 23ca0c3a2414b4d42bd47dde7258b2d4, type: 2}
+  m_BlackboardVariableOverridesList:
+  - rid: 5058475040586072299
+  - rid: 5058475040586072300
+  - rid: 5058475040586072301
+  - rid: 5058475040586072302
+  m_OriginalGraph: {fileID: 2611443199736831369, guid: 23ca0c3a2414b4d42bd47dde7258b2d4, type: 2}
+  m_IsInitialised: 0
+  m_IsStarted: 0
+  references:
+    version: 2
+    RefIds:
+    - rid: 5058475040586072299
+      type: {class: 'BlackboardVariable`1[[UnityEngine.GameObject, UnityEngine.CoreModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 1
+          m_Value1: 0
+        Name: Self
+        m_Value: {fileID: 5862823327918832820}
+    - rid: 5058475040586072300
+      type: {class: 'BlackboardVariable`1[[UnityEngine.Animator, UnityEngine.AnimationModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 12356005914310085949
+          m_Value1: 16292835098989856565
+        Name: Animator
+        m_Value: {fileID: 553723005854791806}
+    - rid: 5058475040586072301
+      type: {class: 'BlackboardVariable`1[[WaitForOwner, Assembly-CSharp]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 10849963294960267447
+          m_Value1: 14033745342917941451
+        Name: WaitForOwner
+        m_Value: {fileID: 11400000, guid: 16aaba7fadb018246a00f0de45a25395, type: 2}
+    - rid: 5058475040586072302
+      type: {class: 'BlackboardVariable`1[[SayOrder, Assembly-CSharp]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 11740205583698980290
+          m_Value1: 7313597609446291937
+        Name: SayOrder
+        m_Value: {fileID: 11400000, guid: d9e100ac1dfdc0c41812a4137d42eac6, type: 2}
 --- !u!1 &5872399859601374019
 GameObject:
   m_ObjectHideFlags: 0

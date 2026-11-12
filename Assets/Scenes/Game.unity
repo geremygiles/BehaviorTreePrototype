@@ -441,7 +441,7 @@ Transform:
   m_GameObject: {fileID: 297135616}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 2}
+  m_LocalPosition: {x: -0.24, y: 1, z: 2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -755,7 +755,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2db5e7f60cfdcf440924ceb1d1a14876, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  customerCount: 1
+  customerCount: 3
   customerPrefab: {fileID: 5862823327918832820, guid: 105f4f6b3812a704991adc0518a08a53, type: 3}
   target: {fileID: 197503007}
 --- !u!4 &603404666
@@ -1209,12 +1209,20 @@ PrefabInstance:
         UnityEngine.AnimationModule]]'
       objectReference: {fileID: 0}
     - target: {fileID: 5923265328058934637, guid: d1c25d460f16925418be95cd4bf78a8a, type: 3}
+      propertyPath: 'managedReferences[5058475040586072304]'
+      value: 'Unity.Behavior Unity.Behavior.BlackboardVariable`1[[WaitForOwner, Assembly-CSharp]]'
+      objectReference: {fileID: 0}
+    - target: {fileID: 5923265328058934637, guid: d1c25d460f16925418be95cd4bf78a8a, type: 3}
       propertyPath: managedReferences[5058474812141732417].Name
       value: Animator
       objectReference: {fileID: 0}
     - target: {fileID: 5923265328058934637, guid: d1c25d460f16925418be95cd4bf78a8a, type: 3}
+      propertyPath: managedReferences[5058475040586072304].Name
+      value: WaitForOwner
+      objectReference: {fileID: 0}
+    - target: {fileID: 5923265328058934637, guid: d1c25d460f16925418be95cd4bf78a8a, type: 3}
       propertyPath: m_BlackboardVariableOverridesList.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5923265328058934637, guid: d1c25d460f16925418be95cd4bf78a8a, type: 3}
       propertyPath: managedReferences[5058474812141732322].m_Value
@@ -1225,8 +1233,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 6735298415975084559}
     - target: {fileID: 5923265328058934637, guid: d1c25d460f16925418be95cd4bf78a8a, type: 3}
+      propertyPath: managedReferences[5058475040586072304].m_Value
+      value: 
+      objectReference: {fileID: 11400000, guid: 16aaba7fadb018246a00f0de45a25395, type: 2}
+    - target: {fileID: 5923265328058934637, guid: d1c25d460f16925418be95cd4bf78a8a, type: 3}
       propertyPath: 'm_BlackboardVariableOverridesList.Array.data[2]'
       value: 5058474812141732417
+      objectReference: {fileID: 0}
+    - target: {fileID: 5923265328058934637, guid: d1c25d460f16925418be95cd4bf78a8a, type: 3}
+      propertyPath: 'm_BlackboardVariableOverridesList.Array.data[3]'
+      value: 5058475040586072304
       objectReference: {fileID: 0}
     - target: {fileID: 5923265328058934637, guid: d1c25d460f16925418be95cd4bf78a8a, type: 3}
       propertyPath: managedReferences[5058474812141732417].GUID.m_Value0
@@ -1235,6 +1251,14 @@ PrefabInstance:
     - target: {fileID: 5923265328058934637, guid: d1c25d460f16925418be95cd4bf78a8a, type: 3}
       propertyPath: managedReferences[5058474812141732417].GUID.m_Value1
       value: 15171030557077507075
+      objectReference: {fileID: 0}
+    - target: {fileID: 5923265328058934637, guid: d1c25d460f16925418be95cd4bf78a8a, type: 3}
+      propertyPath: managedReferences[5058475040586072304].GUID.m_Value0
+      value: 11774166800706992851
+      objectReference: {fileID: 0}
+    - target: {fileID: 5923265328058934637, guid: d1c25d460f16925418be95cd4bf78a8a, type: 3}
+      propertyPath: managedReferences[5058475040586072304].GUID.m_Value1
+      value: 4540677525718248128
       objectReference: {fileID: 0}
     - target: {fileID: 6899181381337651104, guid: d1c25d460f16925418be95cd4bf78a8a, type: 3}
       propertyPath: m_Enabled
@@ -1254,7 +1278,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8471053207034759486, guid: d1c25d460f16925418be95cd4bf78a8a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2
+      value: -8.41
       objectReference: {fileID: 0}
     - target: {fileID: 8471053207034759486, guid: d1c25d460f16925418be95cd4bf78a8a, type: 3}
       propertyPath: m_LocalRotation.w

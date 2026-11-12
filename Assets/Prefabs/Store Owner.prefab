@@ -4670,6 +4670,7 @@ MonoBehaviour:
   m_BlackboardVariableOverridesList:
   - rid: 5058474812141732252
   - rid: 5058474812141732322
+  - rid: 5058475040586072303
   m_OriginalGraph: {fileID: 2912578952769509926, guid: 6704b3f029ee83d4981a6f910c434e8f, type: 2}
   m_IsInitialised: 0
   m_IsStarted: 0
@@ -4692,6 +4693,14 @@ MonoBehaviour:
           m_Value1: 16698897283708049821
         Name: Order Counter
         m_Value: {fileID: 0}
+    - rid: 5058475040586072303
+      type: {class: 'BlackboardVariable`1[[UnityEngine.Animator, UnityEngine.AnimationModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 11832883563160434205
+          m_Value1: 15171030557077507075
+        Name: Animator
+        m_Value: {fileID: 4657821690378939765}
 --- !u!195 &6899181381337651104
 NavMeshAgent:
   m_ObjectHideFlags: 0

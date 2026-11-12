@@ -8,7 +8,7 @@ public class CustomerSpawner : MonoBehaviour
     [SerializeField] private GameObject customerPrefab;
     [SerializeField] Transform target;
 
-    private int checkFrequency = 60;
+    private int checkFrequency = 600;
     private int frameCount = 0;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
