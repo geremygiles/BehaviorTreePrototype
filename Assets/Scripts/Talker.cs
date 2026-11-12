@@ -22,6 +22,11 @@ public class Talker : MonoBehaviour
     bool started = false;
     bool speaking = false;
 
+    private void Start()
+    {
+        textBox.SetActive(false);
+    }
+
     public void StartSaying(string line)
     {
         speakingText.text = string.Empty;

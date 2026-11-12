@@ -4,11 +4,15 @@ using UnityEngine;
 public class CustomerSpawner : MonoBehaviour
 {
     [SerializeField] private int customerCount = 3;
+    [SerializeField] private int checkFrequency = 600;
     private int currentCount = 0;
     [SerializeField] private GameObject customerPrefab;
-    [SerializeField] Transform target;
+    [SerializeField] Transform orderCounter;
+    [SerializeField] Transform waitingArea;
+    [SerializeField] Transform pickupCounter;
+    [SerializeField] Transform door;
 
-    private int checkFrequency = 600;
+    
     private int frameCount = 0;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -31,9 +35,12 @@ public class CustomerSpawner : MonoBehaviour
     {
         if (currentCount < customerCount)
         {
-            GameObject customerObject = Instantiate(customerPrefab, transform.position, Quaternion.identity);
+            GameObject customerObject = Instantiate(customerPrefab, transform.position, gameObject.transform.rotation);
             Customer customer = customerObject.GetComponent<Customer>();
-            customer.Target = target;
+            customer.orderCounter = orderCounter;
+            customer.waitingArea = waitingArea;
+            customer.pickupCounter = pickupCounter;
+            customer.door = door;
             currentCount++;
         }
     }

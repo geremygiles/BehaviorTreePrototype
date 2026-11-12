@@ -6336,6 +6336,7 @@ GameObject:
   - component: {fileID: 2242505371210524524}
   - component: {fileID: 7913074030373828599}
   - component: {fileID: 4699467790575997582}
+  - component: {fileID: 716219789664363106}
   m_Layer: 0
   m_Name: Customer
   m_TagString: Untagged
@@ -6351,7 +6352,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5862823327918832820}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -7.82, y: 0.0000000720747, z: 2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -6504,11 +6505,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc9b4f9610a8d974f8b9d95a74e4d701, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Order
-  textBox: {fileID: 1077726763198013346}
-  speakingText: {fileID: 4136988963049684567}
   behaviorGraphAgent: {fileID: 4699467790575997582}
   sayOrderChannel: {fileID: 11400000, guid: d9e100ac1dfdc0c41812a4137d42eac6, type: 2}
-  Target: {fileID: 0}
+  orderCounter: {fileID: 0}
+  waitingArea: {fileID: 0}
+  pickupCounter: {fileID: 0}
+  door: {fileID: 0}
 --- !u!114 &4699467790575997582
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6527,6 +6529,10 @@ MonoBehaviour:
   - rid: 5058475040586072300
   - rid: 5058475040586072301
   - rid: 5058475040586072302
+  - rid: 5058475056875701167
+  - rid: 5058475057158030117
+  - rid: 5058475057383211415
+  - rid: 5058475057456612150
   m_OriginalGraph: {fileID: 2611443199736831369, guid: 23ca0c3a2414b4d42bd47dde7258b2d4, type: 2}
   m_IsInitialised: 0
   m_IsStarted: 0
@@ -6556,7 +6562,7 @@ MonoBehaviour:
           m_Value0: 10849963294960267447
           m_Value1: 14033745342917941451
         Name: WaitForOwner
-        m_Value: {fileID: 11400000, guid: 16aaba7fadb018246a00f0de45a25395, type: 2}
+        m_Value: {fileID: 0}
     - rid: 5058475040586072302
       type: {class: 'BlackboardVariable`1[[SayOrder, Assembly-CSharp]]', ns: Unity.Behavior, asm: Unity.Behavior}
       data:
@@ -6564,7 +6570,54 @@ MonoBehaviour:
           m_Value0: 11740205583698980290
           m_Value1: 7313597609446291937
         Name: SayOrder
-        m_Value: {fileID: 11400000, guid: d9e100ac1dfdc0c41812a4137d42eac6, type: 2}
+        m_Value: {fileID: 0}
+    - rid: 5058475056875701167
+      type: {class: 'BlackboardVariable`1[[CustomerEnterStore, Assembly-CSharp]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 2705299073505087025
+          m_Value1: 16303653444528205743
+        Name: Customer Enter Store
+        m_Value: {fileID: 11400000, guid: 9caf34d07b3e66648bb4fd5549e88445, type: 2}
+    - rid: 5058475057158030117
+      type: {class: 'SharedBlackboardVariable`1[[CustomerAtCounter, Assembly-CSharp]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 5697784539792636627
+          m_Value1: 10689487549136622963
+        Name: Customer at Counter
+        m_Value: {fileID: 0}
+        m_SharedVariablesRuntimeAsset: {fileID: 7016748128849346401, guid: 23ca0c3a2414b4d42bd47dde7258b2d4, type: 2}
+    - rid: 5058475057383211415
+      type: {class: 'BlackboardVariable`1[[OwnerAtCounter, Assembly-CSharp]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 742466532230099142
+          m_Value1: 11693612874500076318
+        Name: Owner at Counter
+        m_Value: {fileID: 11400000, guid: 026e5a35f381a044e98be341dbe491a1, type: 2}
+    - rid: 5058475057456612150
+      type: {class: 'BlackboardVariable`1[[OrderCompleted, Assembly-CSharp]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 14412416940971268280
+          m_Value1: 15663968731114882190
+        Name: Order Completed
+        m_Value: {fileID: 11400000, guid: f4a46177e6bbbc2488c426b99205ebe2, type: 2}
+--- !u!114 &716219789664363106
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5862823327918832820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f6ed482398e3204b9e6290a8e9a9d52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Talker
+  textBox: {fileID: 1077726763198013346}
+  speakingText: {fileID: 4136988963049684567}
 --- !u!1 &5872399859601374019
 GameObject:
   m_ObjectHideFlags: 0

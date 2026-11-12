@@ -2,6 +2,7 @@ using System.Collections;
 using TMPro;
 using Unity.Behavior;
 using UnityEngine;
+using static UnityEngine.GraphicsBuffer;
 
 public class Customer : MonoBehaviour
 {
@@ -14,7 +15,10 @@ public class Customer : MonoBehaviour
     
     [SerializeField] BehaviorGraphAgent behaviorGraphAgent;
     [SerializeField] SayOrder sayOrderChannel;
-    public Transform Target;
+    public Transform orderCounter;
+    public Transform waitingArea;
+    public Transform pickupCounter;
+    public Transform door;
 
     private void OnEnable()
     {
@@ -38,7 +42,10 @@ public class Customer : MonoBehaviour
         GenerateOrder();
         //StartCoroutine(Speak(order.OrderString));
 
-        behaviorGraphAgent.BlackboardReference.SetVariableValue<Transform>("Order Counter", Target);
+        behaviorGraphAgent.BlackboardReference.SetVariableValue<Transform>("Order Counter", orderCounter);
+        behaviorGraphAgent.BlackboardReference.SetVariableValue<Transform>("Waiting Area", waitingArea);
+        behaviorGraphAgent.BlackboardReference.SetVariableValue<Transform>("Pickup Counter", pickupCounter);
+        behaviorGraphAgent.BlackboardReference.SetVariableValue<Transform>("Door", door);
         //navMeshAgent = GetComponent<NavMeshAgent>();
         //navMeshAgent.SetDestination(Target.position);
         //navMeshAgent.enabled = true;
