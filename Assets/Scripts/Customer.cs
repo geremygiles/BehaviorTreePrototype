@@ -13,8 +13,10 @@ public class Customer : MonoBehaviour
     }
     
     
-    [SerializeField] BehaviorGraphAgent behaviorGraphAgent;
+    [SerializeField] public BehaviorGraphAgent behaviorGraphAgent;
     [SerializeField] SayOrder sayOrderChannel;
+    public Transform behind;
+
     public Transform orderCounter;
     public Transform waitingArea;
     public Transform pickupCounter;

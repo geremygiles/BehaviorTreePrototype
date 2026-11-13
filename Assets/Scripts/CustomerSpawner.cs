@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+using Unity.Behavior;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -5,7 +7,30 @@ public class CustomerSpawner : MonoBehaviour
 {
     [SerializeField] private int customerCount = 3;
     [SerializeField] private int checkFrequency = 600;
-    private int currentCount = 0;
+    private List<Customer> customers = new List<Customer>();
+    public int CurrentCount { get { return customers.Count; } }
+
+    public bool SomeoneOrdering
+    {
+        get
+        {
+            foreach (var customer in customers)
+            {
+                customer.behaviorGraphAgent.GetVariable<bool>("Waiting to Order", out BlackboardVariable<bool> ordering);
+                if (ordering.Value)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+    }
+
+    public Transform LastCustomer
+    {
+        get { return customers[^2].behind.transform; }
+    }
+
     [SerializeField] private GameObject customerPrefab;
     [SerializeField] Transform orderCounter;
     [SerializeField] Transform waitingArea;
@@ -28,12 +53,12 @@ public class CustomerSpawner : MonoBehaviour
             CheckSpawn();
             frameCount = 0;
         }
-        
+        Debug.Log(CurrentCount);
     }
 
     private void CheckSpawn()
     {
-        if (currentCount < customerCount)
+        if (customers.Count < customerCount)
         {
             GameObject customerObject = Instantiate(customerPrefab, transform.position, gameObject.transform.rotation);
             Customer customer = customerObject.GetComponent<Customer>();
@@ -41,12 +66,12 @@ public class CustomerSpawner : MonoBehaviour
             customer.waitingArea = waitingArea;
             customer.pickupCounter = pickupCounter;
             customer.door = door;
-            currentCount++;
+            customers.Add(customer);
         }
     }
 
-    public void DecrementCount()
+    public void RemoveCustomer(Customer customer)
     {
-        currentCount--;
+        customers.Remove(customer);
     }
 }

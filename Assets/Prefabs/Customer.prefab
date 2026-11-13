@@ -6363,6 +6363,7 @@ Transform:
   - {fileID: 3290805740170707964}
   - {fileID: 7310350810938472158}
   - {fileID: 2935678467136980633}
+  - {fileID: 121164901128429981}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &553723005854791806
@@ -6507,6 +6508,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Order
   behaviorGraphAgent: {fileID: 4699467790575997582}
   sayOrderChannel: {fileID: 11400000, guid: d9e100ac1dfdc0c41812a4137d42eac6, type: 2}
+  behind: {fileID: 121164901128429981}
   orderCounter: {fileID: 0}
   waitingArea: {fileID: 0}
   pickupCounter: {fileID: 0}
@@ -6533,6 +6535,7 @@ MonoBehaviour:
   - rid: 5058475057456612150
   - rid: 5058475057553605484
   - rid: 5058475057553605485
+  - rid: 5058475063912694142
   m_OriginalGraph: {fileID: 2611443199736831369, guid: 23ca0c3a2414b4d42bd47dde7258b2d4, type: 2}
   m_IsInitialised: 0
   m_IsStarted: 0
@@ -6604,6 +6607,14 @@ MonoBehaviour:
           m_Value1: 4912195169297786045
         Name: Food Pickup
         m_Value: {fileID: 11400000, guid: 14e6c5c01e5b7c54d929fb23b00fec19, type: 2}
+    - rid: 5058475063912694142
+      type: {class: 'BlackboardVariable`1[[Customer, Assembly-CSharp]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 4883732882715505302
+          m_Value1: 11649832848705052637
+        Name: Customer
+        m_Value: {fileID: 7913074030373828599}
 --- !u!114 &716219789664363106
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8376,6 +8387,37 @@ SkinnedMeshRenderer:
     m_Center: {x: 0.000000007450581, y: 1.666337, z: -0.0038986206}
     m_Extent: {x: 0.096822694, y: 0.20039165, z: 0.13049704}
   m_DirtyAABB: 0
+--- !u!1 &7425565534367987850
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 121164901128429981}
+  m_Layer: 0
+  m_Name: Behind
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &121164901128429981
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7425565534367987850}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8674542843659018786}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7477127480183167521
 GameObject:
   m_ObjectHideFlags: 0
