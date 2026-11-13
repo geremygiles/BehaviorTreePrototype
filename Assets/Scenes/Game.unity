@@ -1089,7 +1089,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   customerCount: 2
   checkFrequency: 300
-  customerPrefab: {fileID: 5862823327918832820, guid: 105f4f6b3812a704991adc0518a08a53, type: 3}
+  customerPrefabs:
+  - {fileID: 827342450058855761, guid: 872cfca7f9016354bb9c3bb44440df26, type: 3}
+  - {fileID: 962709102826599136, guid: cc7e4dc38346bb741acb79978cd7e101, type: 3}
+  - {fileID: 3401039026333221639, guid: a77fee2d3676e0a4f8461b7ef3bbf298, type: 3}
+  - {fileID: 1563161276927012185, guid: 1e4a41daafa0af844bff2ac563d9b14b, type: 3}
+  - {fileID: 8699581280265974512, guid: 126c9423b6ded9f45b864565166e4120, type: 3}
+  - {fileID: 3303591661452167648, guid: 2d2d0a88107f2b44ca1af60b81e18dbb, type: 3}
   orderCounter: {fileID: 197503007}
   waitingArea: {fileID: 1890432460}
   pickupCounter: {fileID: 298207831}

@@ -39,7 +39,7 @@ public class CustomerSpawner : MonoBehaviour
         get { return customers[^2].behind.transform; }
     }
 
-    [SerializeField] private GameObject customerPrefab;
+    [SerializeField] private GameObject[] customerPrefabs;
     [SerializeField] Transform orderCounter;
     [SerializeField] Transform waitingArea;
     [SerializeField] Transform pickupCounter;
@@ -68,7 +68,8 @@ public class CustomerSpawner : MonoBehaviour
     {
         if (customers.Count < customerCount)
         {
-            GameObject customerObject = Instantiate(customerPrefab, transform.position, gameObject.transform.rotation);
+            int prefabIndex = Random.Range(0, customerPrefabs.Length);
+            GameObject customerObject = Instantiate(customerPrefabs[prefabIndex], transform.position, gameObject.transform.rotation);
             Customer customer = customerObject.GetComponent<Customer>();
             customer.orderCounter = orderCounter;
             customer.waitingArea = waitingArea;
