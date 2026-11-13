@@ -2175,6 +2175,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Store Owner
       objectReference: {fileID: 0}
+    - target: {fileID: 6933779275482573843, guid: d1c25d460f16925418be95cd4bf78a8a, type: 3}
+      propertyPath: m_TagString
+      value: owner
+      objectReference: {fileID: 0}
     - target: {fileID: 8471053207034759486, guid: d1c25d460f16925418be95cd4bf78a8a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.31
