@@ -47,7 +47,7 @@ public class Talker : MonoBehaviour
             yield return new WaitForSeconds(SPEAKING_SPEED);
         }
 
-        yield return new WaitForSeconds(WAIT_TIME * words.Length);
+        yield return new WaitForSeconds((WAIT_TIME * words.Length) + 1f);
 
         textBox.SetActive(false);
         speaking = false;

@@ -26,6 +26,14 @@ public class CustomerSpawner : MonoBehaviour
         }
     }
 
+    public Customer FirstCustomer
+    {
+        get
+        {
+            return customers[0];
+        }
+    }
+
     public Transform LastCustomer
     {
         get { return customers[^2].behind.transform; }
