@@ -44,4 +44,9 @@ public class CustomerSpawner : MonoBehaviour
             currentCount++;
         }
     }
+
+    public void DecrementCount()
+    {
+        currentCount--;
+    }
 }

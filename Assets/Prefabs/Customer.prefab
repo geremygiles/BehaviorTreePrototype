@@ -6527,8 +6527,6 @@ MonoBehaviour:
   m_BlackboardVariableOverridesList:
   - rid: 5058475040586072299
   - rid: 5058475040586072300
-  - rid: 5058475040586072301
-  - rid: 5058475040586072302
   - rid: 5058475056875701167
   - rid: 5058475057158030117
   - rid: 5058475057383211415
@@ -6557,22 +6555,6 @@ MonoBehaviour:
           m_Value1: 16292835098989856565
         Name: Animator
         m_Value: {fileID: 553723005854791806}
-    - rid: 5058475040586072301
-      type: {class: 'BlackboardVariable`1[[WaitForOwner, Assembly-CSharp]]', ns: Unity.Behavior, asm: Unity.Behavior}
-      data:
-        GUID:
-          m_Value0: 10849963294960267447
-          m_Value1: 14033745342917941451
-        Name: WaitForOwner
-        m_Value: {fileID: 0}
-    - rid: 5058475040586072302
-      type: {class: 'BlackboardVariable`1[[SayOrder, Assembly-CSharp]]', ns: Unity.Behavior, asm: Unity.Behavior}
-      data:
-        GUID:
-          m_Value0: 11740205583698980290
-          m_Value1: 7313597609446291937
-        Name: SayOrder
-        m_Value: {fileID: 0}
     - rid: 5058475056875701167
       type: {class: 'BlackboardVariable`1[[CustomerEnterStore, Assembly-CSharp]]', ns: Unity.Behavior, asm: Unity.Behavior}
       data:

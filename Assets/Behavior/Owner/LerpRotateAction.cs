@@ -24,15 +24,20 @@ public partial class LerpRotateAction : Action
     {
         lerp += Time.deltaTime * lerpSpeed;
 
-        Quaternion newRotation = Quaternion.Lerp(Agent.Value.rotation, Quaternion.Euler(targetRotation), lerp);
-        // Quaternion.Euler(Vector3.Lerp(orignalRotation, Vector.Value, lerp));
+        Quaternion newRotation;
+
+        if (YRotation < Agent.Value.rotation.y) // Ensures the larger value is the starting lerp
+        {
+            newRotation = Quaternion.Lerp(Agent.Value.rotation, Quaternion.Euler(targetRotation), lerp);
+        }
+        else
+        {
+            newRotation = Quaternion.Lerp(Quaternion.Euler(targetRotation), Agent.Value.rotation, lerp);
+        }
 
         Agent.Value.rotation = newRotation;
 
-        if (lerp >= 1)
-        {
-            return Status.Success;
-        }
+        if (lerp >= 1) return Status.Success;
         else return Status.Running;
     }
 

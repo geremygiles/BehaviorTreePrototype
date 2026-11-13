@@ -2763,17 +2763,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4116541557292583637}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0.23144278, y: 0.10022445, z: -0.023978524, w: 0.96737504}
+  m_LocalPosition: {x: 0, y: 0, z: -124}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7716432560455364676}
   m_Father: {fileID: 3398736418214251282}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 26.91, y: 11.83, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -297}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1442309409001940211
@@ -4087,17 +4087,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5768499964534428024}
-  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
-  m_LocalPosition: {x: 0, y: 0, z: 10.41}
-  m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.0025, y: 0.0025, z: 0.0025}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 5307569552580614203}
   m_Father: {fileID: 8471053207034759486}
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -16.91, y: 2.43}
+  m_AnchoredPosition: {x: 0.99, y: 2.42}
   m_SizeDelta: {x: 500, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &7118590408202414898
@@ -4739,7 +4739,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6933779275482573843}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.2439938, y: 0.0000000720747, z: -0.043395706}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -4853,9 +4853,16 @@ MonoBehaviour:
   - rid: 5058474812141732252
   - rid: 5058474812141732322
   - rid: 5058474812141732417
-  - rid: 5058475040586072304
-  - rid: 5058475056750658434
-  - rid: 5058475056750658436
+  - rid: 5058475056750658433
+  - rid: 5058475056750658435
+  - rid: 5058475056875700285
+  - rid: 5058475056875700286
+  - rid: 5058475057158030116
+  - rid: 5058475057456612045
+  - rid: 5058475057456612046
+  - rid: 5058475057456612149
+  - rid: 5058475057553605486
+  - rid: 5058475057553605487
   m_OriginalGraph: {fileID: 2912578952769509926, guid: 6704b3f029ee83d4981a6f910c434e8f, type: 2}
   m_IsInitialised: 0
   m_IsStarted: 0
@@ -4886,30 +4893,86 @@ MonoBehaviour:
           m_Value1: 15171030557077507075
         Name: Animator
         m_Value: {fileID: 4657821690378939765}
-    - rid: 5058475040586072304
-      type: {class: 'BlackboardVariable`1[[WaitForOwner, Assembly-CSharp]]', ns: Unity.Behavior, asm: Unity.Behavior}
-      data:
-        GUID:
-          m_Value0: 11774166800706992851
-          m_Value1: 4540677525718248128
-        Name: WaitForOwner
-        m_Value: {fileID: 0}
-    - rid: 5058475056750658434
+    - rid: 5058475056750658433
       type: {class: 'BlackboardVariable`1[[CustomerEnterStore, Assembly-CSharp]]', ns: Unity.Behavior, asm: Unity.Behavior}
       data:
         GUID:
           m_Value0: 13155119354466511980
           m_Value1: 11748228942051288887
         Name: CustomerEnterStore
-        m_Value: {fileID: 0}
-    - rid: 5058475056750658436
+        m_Value: {fileID: 11400000, guid: 9caf34d07b3e66648bb4fd5549e88445, type: 2}
+    - rid: 5058475056750658435
       type: {class: 'BlackboardVariable`1[[OwnerAtCounter, Assembly-CSharp]]', ns: Unity.Behavior, asm: Unity.Behavior}
       data:
         GUID:
           m_Value0: 3795563490923452864
           m_Value1: 9209985540660092500
         Name: OwnerAtCounter
+        m_Value: {fileID: 11400000, guid: 026e5a35f381a044e98be341dbe491a1, type: 2}
+    - rid: 5058475056875700285
+      type: {class: 'BlackboardVariable`1[[UnityEngine.Transform, UnityEngine.CoreModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 6582717075305268019
+          m_Value1: 10339643403467294472
+        Name: Pickup Counter
         m_Value: {fileID: 0}
+    - rid: 5058475056875700286
+      type: {class: 'BlackboardVariable`1[[UnityEngine.Transform, UnityEngine.CoreModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 2079245427099564505
+          m_Value1: 16473259609314991532
+        Name: Stove
+        m_Value: {fileID: 0}
+    - rid: 5058475057158030116
+      type: {class: 'BlackboardVariable`1[[CustomerAtCounter, Assembly-CSharp]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 16968802908674222327
+          m_Value1: 8780370664377274295
+        Name: Customer at Counter
+        m_Value: {fileID: 11400000, guid: 9ddf8e6b948c1674e91331c200715fcb, type: 2}
+    - rid: 5058475057456612045
+      type: {class: 'BlackboardVariable`1[[UnityEngine.Transform, UnityEngine.CoreModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 1991147910584136635
+          m_Value1: 9642590041160462238
+        Name: Customer Pickup
+        m_Value: {fileID: 0}
+    - rid: 5058475057456612046
+      type: {class: 'BlackboardVariable`1[[UnityEngine.Transform, UnityEngine.CoreModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 10495777116465732102
+          m_Value1: 16654826471603896322
+        Name: Customer Order
+        m_Value: {fileID: 0}
+    - rid: 5058475057456612149
+      type: {class: 'BlackboardVariable`1[[OrderCompleted, Assembly-CSharp]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 7821558097578940535
+          m_Value1: 99618216512109496
+        Name: OrderCompleted
+        m_Value: {fileID: 11400000, guid: f4a46177e6bbbc2488c426b99205ebe2, type: 2}
+    - rid: 5058475057553605486
+      type: {class: 'BlackboardVariable`1[[FoodReady, Assembly-CSharp]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 7557210257733768589
+          m_Value1: 15589804174495618127
+        Name: FoodReady
+        m_Value: {fileID: 11400000, guid: 034178294ef7c0e4db7f0f8ca58256f7, type: 2}
+    - rid: 5058475057553605487
+      type: {class: 'BlackboardVariable`1[[FoodPickup, Assembly-CSharp]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 7845111062193126070
+          m_Value1: 10227647424593749882
+        Name: FoodPickup
+        m_Value: {fileID: 11400000, guid: 14e6c5c01e5b7c54d929fb23b00fec19, type: 2}
 --- !u!195 &6899181381337651104
 NavMeshAgent:
   m_ObjectHideFlags: 0
