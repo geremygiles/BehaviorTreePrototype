@@ -7,6 +7,8 @@ public class Talker : MonoBehaviour
 {
     private const float SPEAKING_SPEED = 0.1f;
 
+    private const float WAIT_TIME = .25f;
+
     [SerializeField] GameObject textBox;
 
     [SerializeField] TextMeshProUGUI speakingText;
@@ -45,7 +47,7 @@ public class Talker : MonoBehaviour
             yield return new WaitForSeconds(SPEAKING_SPEED);
         }
 
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(WAIT_TIME * words.Length);
 
         textBox.SetActive(false);
         speaking = false;

@@ -5,19 +5,18 @@ using Action = Unity.Behavior.Action;
 using Unity.Properties;
 
 [Serializable, GeneratePropertyBag]
-[NodeDescription(name: "Lerp Rotate", story: "[Agent] lerps to [vector]", category: "Action", id: "b354faecf2c51bb555f4811d383e40df")]
+[NodeDescription(name: "Lerp Rotate", story: "[Agent] turns to [YRotation] degrees", category: "Action", id: "b354faecf2c51bb555f4811d383e40df")]
 public partial class LerpRotateAction : Action
 {
     [SerializeReference] public BlackboardVariable<Transform> Agent;
-    [SerializeReference] public BlackboardVariable<Vector3> Vector;
-
-    Vector3 orignalRotation;
+    [SerializeReference] public BlackboardVariable<int> YRotation;
+    Vector3 targetRotation = Vector3.zero;
 
     float lerp = 0f;
-    float lerpSpeed = 0.1f;
+    float lerpSpeed = 1f;
     protected override Status OnStart()
     {
-        orignalRotation = Agent.Value.rotation.eulerAngles;
+        targetRotation.y = YRotation.Value;
         return Status.Running;
     }
 
@@ -25,7 +24,8 @@ public partial class LerpRotateAction : Action
     {
         lerp += Time.deltaTime * lerpSpeed;
 
-        Quaternion newRotation = Quaternion.Euler(Vector3.Lerp(orignalRotation, Vector.Value, lerp));
+        Quaternion newRotation = Quaternion.Lerp(Agent.Value.rotation, Quaternion.Euler(targetRotation), lerp);
+        // Quaternion.Euler(Vector3.Lerp(orignalRotation, Vector.Value, lerp));
 
         Agent.Value.rotation = newRotation;
 
