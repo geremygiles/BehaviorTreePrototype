@@ -1088,7 +1088,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   customerCount: 10
-  checkFrequency: 3000
+  checkFrequency: 2500
   customerPrefabs:
   - {fileID: 827342450058855761, guid: 872cfca7f9016354bb9c3bb44440df26, type: 3}
   - {fileID: 962709102826599136, guid: cc7e4dc38346bb741acb79978cd7e101, type: 3}

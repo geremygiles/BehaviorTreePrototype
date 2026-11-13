@@ -31,6 +31,7 @@ public class Talker : MonoBehaviour
 
     public void StartSaying(string line)
     {
+        StopAllCoroutines();
         speakingText.text = string.Empty;
         textBox.SetActive(true);
         started = speaking = true;
